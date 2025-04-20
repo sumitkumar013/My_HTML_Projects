@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sarkari Result - Clone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    header {
+      background-color: #b10000;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 32px;
+    }
+
+    nav {
+      background-color: #000;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      background-color: #b10000;
+      border-radius: 5px;
+    }
+
+    .marquee {
+      background: #fff;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      color: #b10000;
+      font-size: 18px;
+      border-bottom: 2px solid #b10000;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .left, .right {
+      flex: 1 1 300px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .left h2, .right h2 {
+      color: #b10000;
+      font-size: 22px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 8px;
+    }
+
+    ul.links {
+      list-style: none;
+    }
+
+    ul.links li {
+      margin: 8px 0;
+    }
+
+    ul.links li a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    ul.links li a:hover {
+      color: #b10000;
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      background-color: #000;
+      color: white;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+
+      header h1 {
+        font-size: 24px;
+      }
+
+      nav a {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🔴 SarkariResult.com</h1>
+    <p>India’s No.1 Job Portal</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Latest Jobs</a>
+    <a href="#">Results</a>
+    <a href="#">Admit Card</a>
+    <a href="#">Answer Key</a>
+    <a href="#">Syllabus</a>
+    <a href="#">Search</a>
+    <a href="#">Contact Us</a>
+  </nav>
+
+  <div class="marquee">
+    Sarkari Result: All Government Exams, Result, Admit Card, Jobs Info in One Place.
+  </div>
+
+  <div class="container">
+    <div class="left">
+      <h2>Latest Jobs</h2>
+      <ul class="links">
+        <li><a href="#">UPSC NDA 2025 Online Form</a></li>
+        <li><a href="#">Bihar Police Constable Vacancy</a></li>
+        <li><a href="#">Railway Group D Exam 2025</a></li>
+        <li><a href="#">SSC CHSL Recruitment</a></li>
+      </ul>
+    </div>
+
+    <div class="right">
+      <h2>Results / Admit Cards</h2>
+      <ul class="links">
+        <li><a href="#">UP Board 10th, 12th Result 2025</a></li>
+        <li><a href="#">BPSC Prelims Result Out</a></li>
+        <li><a href="#">CTET January Admit Card</a></li>
+        <li><a href="#">JEE Main Session 1 Result</a></li>
+      </ul>
+    </div>
+  </div>
+
+ 
+</body>
+</html>

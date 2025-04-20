@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chennai Super Kings - IPL 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #fcd116; /* CSK jersey yellow */
+      color: #003366;
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    header img {
+      width: 80px;
+      vertical-align: middle;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    nav {
+      background-color: #003366;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #fcd116;
+    }
+    .content {
+      padding: 2rem;
+    }
+    h2 {
+      color: #003366;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      width: 50px;
+      height: 3px;
+      background: #fcd116;
+      display: block;
+      margin-top: 5px;
+    }
+    .players {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    .player-card {
+      background: #fff;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .player-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    .player-card img {
+      width: 80px;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+    .player-card:hover img {
+      transform: scale(1.1);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 0.8rem;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #003366;
+      color: #fff;
+    }
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* Gallery Section Styles */
+    #gallery {
+      padding: 2rem;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    #gallery h2 {
+      color: #003366;
+      margin-bottom: 1.5rem;
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      justify-items: center;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cyberriedstore.com/wp-content/uploads/2023/02/csk-logo-cyberriedstore.png" alt="CSK Logo">
+    <h1>Chennai Super Kings</h1>
+    <p>IPL 2025 Team Page</p>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#players">Players</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#gallery">Gallery</a>
+  </nav>
+  <div class="content">
+    <section id="about">
+      <h2>About Chennai Super Kings</h2>
+      <p>The Chennai Super Kings (CSK), one of the most successful franchises in IPL history, are known for their consistency and iconic captain MS Dhoni. Based in Chennai, Tamil Nadu, and representing the M. A. Chidambaram Stadium, the team has won multiple IPL titles and is adored by fans worldwide.</p>
+    </section>
+    <section id="players">
+      <h2>Key Players</h2>
+      <div class="players">
+        <div class="player-card">
+          <img src="https://documents.iplt20.com/ipl/IPLHeadshot2025/57.png" alt="MS Dhoni">
+          <p>MS Dhoni (Captain)</p>
+        </div>
+        <div class="player-card">
+          <img src="data:image/jpeg;base64,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" alt="Ruturaj Gaikwad">
+          <p>Ruturaj Gaikwad</p>
+        </div>
+        <div class="player-card">
+          <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/46.png" alt="Ravindra Jadeja">
+          <p>Ravindra Jadeja</p>
+        </div>
+        <div class="player-card">
+          <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/724.png" alt="rachin ravindra">
+          <p>Deepak Chahar</p>
+        </div>
+      </div>
+    </section>
+    <section id="schedule">
+      <h2>CSK Match Schedule - IPL 2025</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Opponent</th>
+            <th>Venue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>April 1</td>
+            <td>Mumbai Indians</td>
+            <td>Mumbai</td>
+          </tr>
+          <tr>
+            <td>April 9</td>
+            <td>Royal Challengers Bangalore</td>
+            <td>Chennai</td>
+          </tr>
+          <tr>
+            <td>April 14</td>
+            <td>Sunrisers Hyderabad</td>
+            <td>Chennai</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section id="gallery">
+      <h2>CSK Gallery</h2>
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <img src="https://cyberriedstore.com/wp-content/uploads/2023/02/csk-logo-cyberriedstore.png" alt="CSK Logo">
+        </div>
+        <div class="gallery-item">
+          <img src="https://static.india.com/wp-content/uploads/2023/05/image-700x472-1-9.png" alt="CSK Celebration">
+        </div>
+        <div class="gallery-item">
+          <img src="https://preview.redd.it/yesterday-ms-dhoni-completed-16-years-with-chennai-super-v0-rzx71fwl3zjc1.png?width=640&crop=smart&auto=webp&s=1447355054949045f12eb4feaae9257381b910a5" alt="CSK Trophy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://mppscguide.com/cric/csk-ipl-2025-full-squad-csktataipl2025t20.webp" alt="CSK Squad">
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <footer>
+    <p>&copy; 2025 Chennai Super Kings Fan Page | Made with ❤️ for CSK Fans</p>
+  </footer>
+</body>
+</html>
