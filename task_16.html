@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JAVA SCRIPT</title>
+  <style>
+     body{ 
+    margin: 0;
+    background-color: antiquewhite;
+}
+header{
+    height: 70px ;
+    width: auto;
+    background-color:#793f1d ;
+    color:aliceblue;
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+ }
+ #task2{
+    height:220px;
+    width: auto;
+    background-color: rgb(242, 194, 131);
+    margin: 40px;
+    margin-top: 10px;
+    padding-top: 2px;
+    padding-left:5px ;
+    border-radius: 10px;
+}
+#task1{
+    height:300px;
+    width: auto;
+    background-color: rgb(242, 194, 131);
+    margin: 40px;
+    margin-top: 10px;
+    padding-top: 2px;
+    padding-left:5px ;
+    border-radius: 10px;
+}
+#task3{
+    height:150px;
+    width: auto;
+    background-color: rgb(242, 194, 131);
+    margin: 40px;
+    margin-top: 10px;
+    padding-top: 2px;
+    padding-left:5px ;
+    border-radius: 10px;
+}
+#task4{
+    height:150px;
+    width: auto;
+    background-color: rgb(242, 194, 131);
+    margin: 40px;
+    margin-top: 10px;
+    padding-top: 2px;
+    padding-left:5px ;
+    border-radius: 10px;
+}
+  </style>
+</head>
+<body>
+    <header><h1>TASK 16</h1></header>
+
+  <div  id="task1">
+    <h3>1. Basic Information Form</h3>
+    <input type="text" id="name" placeholder="Name"><br><br>
+    <input type="email" id="email" placeholder="Email"><br><br>
+    <input type="text" id="phone" placeholder="Phone"><br><br>
+    <button onclick="showFormData()">Show Info</button>
+    <p id="formResult"></p>
+    <script>
+    function showFormData() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      document.getElementById("formResult").innerText = 
+        "Name: " + name + "\nEmail: " + email + "\nPhone: " + phone;
+    }
+
+    </script>
+  </div>
+
+  <div  id="task2">
+    <h3>2. Change Image</h3>
+    <img id="myImage" src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8=" width="150">
+    <br><br>
+    <button onclick="changeImage()">Change Image</button>
+    <script>
+    function changeImage() {
+      document.getElementById("myImage").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY5SJbcM-L0_s4SmG-mfHrFeD42ep48m06cw&s";
+    }
+    </script>
+  </div>
+  <div  id="task3">
+    <h3>3. Font Size Changer</h3>
+    <p id="fontText">This is some sample text.</p>
+    <button onclick="increaseFont()">Increase Font</button>
+    <button onclick="decreaseFont()">Decrease Font</button>
+    <script>
+    let fontSize = 16;
+    function increaseFont() {
+      fontSize += 2;
+      document.getElementById("fontText").style.fontSize = fontSize + "px";
+    }
+
+    function decreaseFont() {
+      fontSize = Math.max(8, fontSize - 2); // minimum font size of 8px
+      document.getElementById("fontText").style.fontSize = fontSize + "px";
+    }
+    </script>
+  </div>
+  <div  id="task4">
+    <h3>4. Show Current Date & Time</h3>
+    <button onclick="showDateTime()">Show Date & Time</button>
+    <pre id="dateTimeResult"></pre>
+    <script>
+     
+      function showDateTime() {
+        const now = new Date();
+        document.getElementById("dateTimeResult").innerText = now.toString();
+      }
+    </script>
+  
+  </div>
+
+  
+</body>
+</html>

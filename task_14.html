@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA SCRIPT</title>
+    <style>
+        body{ 
+    margin: 0;
+}
+header{
+    height: 70px ;
+    width: auto;
+    background-color:#3d5760 ;
+    color:aliceblue;
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+ }
+ div{
+    height:150px;
+    width: auto;
+    background-color: rgb(242, 194, 131);
+    margin: 40px;
+    margin-top: 10px;
+    padding-top: 2px;
+    padding-left:5px ;
+    border-radius: 10px;
+ }
+ 
+
+    </style>
+</head>
+<body>
+    <header><h1>TASK 14</h1></header>
+    <div>
+        <h2>Question 1</h2>
+        <input type="text" id="numberInput" placeholder="Enter numbers (e.g., 4, -2, 7, -5)">
+  <button onclick="filterNegatives()">Filter</button>
+
+  <pre id="result"></pre>
+  <script> 
+   function filterNegatives() {
+    
+      var input = document.getElementById("numberInput").value;
+      var numArray = input.split(',').map(function(item) {
+      return parseFloat(item.trim());
+      });   
+      var filtered = numArray.filter(function(num) {
+      return !isNaN(num) && num >= 0;
+      });
+
+    document.getElementById("result").innerText = "Filtered Numbers: " + filtered.join(', ');
+    }
+  </script>
+</div>
+<div>
+    <h2>Question 2</h2>
+    <input type="number" id="numberInput2" placeholder="Enter a number">
+    <button onclick="calculateDifference()">Calculate</button>
+  
+    <pre id="result2"></pre>
+  
+    <script>
+        function calculateDifference() {
+          var num = parseFloat(document.getElementById("numberInput2").value);
+          var diff;
+    
+          if (isNaN(num)) {
+            document.getElementById("result2").innerText = "Please enter a valid number.";
+            return;
+          }
+    
+          if (num > 13) {
+            diff = 2 * Math.abs(num - 13);
+          } else {
+            diff = 13 - num;
+          }
+    
+          document.getElementById("result2").innerText = "Result: " + diff;
+        }
+      </script>
+</div>
+<div>
+    <h2>Question 3</h2>
+    <input type="number" id="countInput" placeholder="Enter number of terms">
+    <button onclick="generateFibonacci()">Generate Fibonacci</button>
+
+    
+  
+    <pre id="result3"></pre>
+    <script>
+        function generateFibonacci() {
+          var count = parseInt(document.getElementById("countInput").value);
+    
+          if (isNaN(count) || count <= 0) {
+            document.getElementById("result3").innerText = "Please enter a positive integer.";
+            return;
+          }
+    
+          var fibSeries = [];
+          var a = 0, b = 1;
+    
+          for (var i = 0; i < count; i++) {
+            fibSeries.push(a);
+            var next = a + b;
+            a = b;
+            b = next;
+          }
+    
+          document.getElementById("result3").innerText = "Fibonacci Series: " + fibSeries.join(', ');
+        }
+      </script>
+  
+    
+</div>
+<div>
+    <h2>Question 4</h2>
+    <button onclick="sumMultiples()">Calculate Sum of Multiples of 3 and 5 below 1000</button>
+    
+  
+    <pre id="result4"></pre>
+    <script>
+        function sumOfMultiples(limit) {
+          let sum = 0;
+          for (let i = 0; i < limit; i++) {
+            if (i % 3 === 0 || i % 5 === 0) {
+              sum += i;
+            }
+          }
+          return sum;
+        }
+    
+        function sumMultiples() {
+          const result = sumOfMultiples(1000);
+          document.getElementById("result4").innerText = "Sum: " + result;
+        }
+      </script>
+  
+    
+</div>
+<div>
+    <h2>Question 5</h2>
+    <input type="number" id="numberInput5" placeholder="Enter a number">
+    <button onclick="getCube()">Get Cube</button>
+
+    
+  
+    <pre id="result5"></pre>
+    <script>
+        var cube = new Function("n", "return n * n * n;");
+    
+        function getCube() {
+          var num = parseFloat(document.getElementById("numberInput5").value);
+    
+          if (isNaN(num)) {
+            document.getElementById("result5").innerText = "Please enter a valid number.";
+            return;
+          }
+    
+          var result = cube(num);
+          document.getElementById("result5").innerText = "Cube: " + result;
+        }
+      </script>
+  
+    
+</div>
+
+
+
+
+    
+</body>
+</html>

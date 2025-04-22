@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA SCRIPT</title>
+    <style>
+     body{ 
+    margin: 0;
+}
+header{
+    height: 70px ;
+    width: auto;
+    background-color:#526140 ;
+    color:aliceblue;
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+ }
+ div{
+    height:150px;
+    width: auto;
+    background-color: rgb(242, 194, 131);
+    margin: 40px;
+    margin-top: 10px;
+    padding-top: 2px ;
+    padding-left:5px ;
+    border-radius: 10px;
+ }
+ 
+    </style>
+</head>
+<body>
+    <header><h1>TASK 15</h1></header>
+    <div>
+        <h3>1. Sort an Array</h3>
+  <input type="text" id="sortInput" placeholder="Enter elements (e.g. 4,1,7,2)">
+  <button onclick="sortArray()">Sort Array</button>
+  <pre id="sortResult"></pre>
+  <script>// Task 1: Sort Array
+    function sortArray() {
+      let input = document.getElementById("sortInput").value;
+      let arr = input.split(',').map(item => item.trim());
+      let sorted = arr.sort();
+      document.getElementById("sortResult").innerText = "Sorted Array: " + sorted.join(', ');
+    }
+    </script>
+    </div>
+  <div>
+
+  <h3>2. Concatenate Two Arrays</h3>
+  <input type="text" id="array1" placeholder="Array 1 (e.g. 1,2,3)">
+  <input type="text" id="array2" placeholder="Array 2 (e.g. 4,5,6)">
+  <button onclick="concatArrays()">Concatenate Arrays</button>
+  <pre id="concatResult"></pre>
+  <script>
+    function concatArrays() {
+      let arr1 = document.getElementById("array1").value.split(',').map(item => item.trim());
+      let arr2 = document.getElementById("array2").value.split(',').map(item => item.trim());
+      let combined = arr1.concat(arr2);
+      document.getElementById("concatResult").innerText = "Concatenated Array: " + combined.join(', ');
+    }
+</script>
+</div>
+<div>
+  <h3>3. Remove First Element</h3>
+  <input type="text" id="removeInput" placeholder="Enter elements (e.g. a,b,c)">
+  <button onclick="removeFirst()">Remove First Element</button>
+  <pre id="removeResult"></pre>
+
+  <script>
+    function removeFirst() {
+      let input = document.getElementById("removeInput").value;
+      let arr = input.split(',').map(item => item.trim());
+      arr.shift(); // Remove the first element
+      document.getElementById("removeResult").innerText = "After Removing First Element: " + arr.join(', ');
+    }
+  </script>
+
+</div>
+    
+</body>
+</html>
